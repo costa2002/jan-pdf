@@ -1,0 +1,55 @@
+--- 
+cursor_positions: 
+  - :path: config/initializers/mime_types.rb
+    :cursor_offset: 254
+    :timestamp: 2012-02-16 09:35:13.410000 +02:00
+  - :path: config/initializers/prawn.rb
+    :cursor_offset: 15
+    :timestamp: 2012-02-16 09:36:49.287000 +02:00
+  - :path: config/application.rb
+    :cursor_offset: 1781
+    :timestamp: 2012-02-16 09:36:15.464000 +02:00
+  - :path: db/migrate/20120216074216_create_customers.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 09:42:16.755000 +02:00
+  - :path: db/development.sqlite3
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 11:01:06.444000 +02:00
+  - :path: db/schema.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 11:36:31.095000 +02:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 09:30:08.978000 +02:00
+  - :path: app/views/customers/edit.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 09:42:17.335000 +02:00
+  - :path: config/initializers/wrap_parameters.rb
+    :cursor_offset: 330
+    :timestamp: 2012-02-20 14:13:39.561000 +02:00
+  - :path: config/initializers/session_store.rb
+    :cursor_offset: 124
+    :timestamp: 2012-02-20 14:11:14.170000 +02:00
+  - :path: config/routes.rb
+    :cursor_offset: 6
+    :timestamp: 2012-02-17 21:23:01.330000 +02:00
+    :selection_offset: 0
+    :block_selection_mode: false
+  - :path: app/models/customer.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-16 09:42:16.760000 +02:00
+  - :path: app/reports/customers_report.rb
+    :cursor_offset: 1245
+    :timestamp: 2012-02-22 09:14:14.322000 +02:00
+  - :path: app/controllers/customers_controller.rb
+    :cursor_offset: 325
+    :timestamp: 2012-02-20 11:31:12.470000 +02:00
+    :selection_offset: 313
+    :block_selection_mode: false
+  - :path: app/views/customers/index.html.erb
+    :cursor_offset: 12503
+    :timestamp: 2012-02-22 12:34:03.647000 +02:00
+  - :path: Gemfile
+    :cursor_offset: 237
+    :timestamp: 2012-02-24 06:58:54.017000 +02:00
+files_to_retain: 0

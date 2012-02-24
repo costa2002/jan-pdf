@@ -1,0 +1,522 @@
+<body bgcolor="#ccc">
+<style>
+
+#upload{
+	margin:30px 200px; padding:15px;
+	font-weight:bold; font-size:1.3em;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	background:#3366cc;
+	color:#fff;
+	border:1px solid #ccc;
+	width:150px;
+	cursor:pointer !important;
+	-moz-border-radius:5px; -webkit-border-radius:5px;
+}
+.darkbg{
+	background:#999 !important;
+  
+}
+#status{
+	font-family:Arial; padding:5px;
+}
+</style>
+
+<div class = "darkbg" align = "center">
+<h1>Listing customers</h1>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Course location</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Email</th>
+    <th>Instructors Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.name %></td>
+    <td><%= customer.phone %></td>
+    <td><%= customer.courselocation %></td>
+    <td><%= customer.address %></td>
+    <td><%= customer.city %></td>
+    <td><%= customer.state %></td>
+    <td><%= customer.zip %></td>
+    <td><%= customer.email %></td>
+    <td><%= customer.instructorsname %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, :confirm => 'Are you sure?', :method => :delete  %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer', new_customer_path %>
+
+
+<table width="100%" cellspacing ="20">
+<tr>
+<td valign="top">
+<div>
+			<h4>Insert all answer for answer sheet !!!</h4>
+		</div>
+    
+    <div>
+      <b>Test Version:  </b>
+      <INPUT TYPE=RADIO NAME=ans0 VALUE="A" CHECKED >
+			A
+		<INPUT TYPE=RADIO NAME=ans0 VALUE="B">
+        B
+    </div>
+    
+    <br />
+		<div>
+			1 . . .
+			<%= INPUT TYPE=RADIO NAME=ans1 VALUE="A" CHECKED %>
+			A
+			<%=INPUT TYPE=RADIO NAME=ans1 VALUE="B"%>
+			B
+			<%=INPUT TYPE=RADIO NAME=ans1 VALUE="C"%>
+			C
+			<%=INPUT TYPE=RADIO NAME=ans1 VALUE="D"%>
+			D
+		</div>
+		<div>
+			2 . . .
+			<INPUT TYPE=RADIO NAME=ans2 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans2 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans2 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans2 VALUE="D">
+			D
+		</div>
+		<div>
+			3 . . .
+			<INPUT TYPE=RADIO NAME=ans3 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans3 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans3 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans3 VALUE="D">
+			D
+		</div>
+		<div>
+			4 . . .
+			<INPUT TYPE=RADIO NAME=ans4 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans4 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans4 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans4 VALUE="D">
+			D
+		</div>
+		<div>
+			5 . . .
+			<INPUT TYPE=RADIO NAME=ans5 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans5 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans5 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans5 VALUE="D">
+			D
+		</div>
+		<div>
+			6 . . .
+			<INPUT TYPE=RADIO NAME=ans6 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans6 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans6 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans6 VALUE="D">
+			D
+		</div>
+		<div>
+			7 . . .
+			<INPUT TYPE=RADIO NAME=ans7 VALUE="A"CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans7 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans7 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans7 VALUE="D">
+			D
+		</div>
+		<div>
+			8 . . .
+			<INPUT TYPE=RADIO NAME=ans8 VALUE="A"CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans8 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans8 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans8 VALUE="D">
+			D
+		</div>
+		<div>
+			9 . . .
+			<INPUT TYPE=RADIO NAME=ans9 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans9 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans9 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans9 VALUE="D">
+			D
+		</div>
+		<div>
+			10 . . .
+			<INPUT TYPE=RADIO NAME=ans10 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans10 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans10 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans10 VALUE="D">
+			D
+		</div>
+		<div>
+			11 . . .
+			<INPUT TYPE=RADIO NAME=ans11 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans11 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans11 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans11 VALUE="D">
+			D
+		</div>
+		<div>
+			12 . . .
+			<INPUT TYPE=RADIO NAME=ans12 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans12 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans12 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans12 VALUE="D">
+			D
+		</div>
+		<div>
+			13 . . .
+			<INPUT TYPE=RADIO NAME=ans13 VALUE="A" CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans13 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans13 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans13 VALUE="D">
+			D
+		</div>
+		<div>
+			14 . . .
+			<INPUT TYPE=RADIO NAME=ans14 VALUE="A"CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans14 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans14 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans14 VALUE="D">
+			D
+		</div>
+		<div>
+			15 . . .
+			<INPUT TYPE=RADIO NAME=ans15 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans15 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans15 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans15 VALUE="D">
+			D
+		</div>
+		<div>
+			16 . . .
+			<INPUT TYPE=RADIO NAME=ans16 VALUE="A"CHECKED >
+			A
+			<INPUT TYPE=RADIO NAME=ans16 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans16 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans16 VALUE="D">
+			D
+		</div>
+		<div>
+			17 . . .
+			<INPUT TYPE=RADIO NAME=ans17 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans17 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans17 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans17 VALUE="D">
+			D
+		</div>
+		<div>
+			18 . . .
+			<INPUT TYPE=RADIO NAME=ans18 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans18 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans18 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans18 VALUE="D">
+			D
+		</div>
+		<div>
+			19 . . .
+			<INPUT TYPE=RADIO NAME=ans19 VALUE="A" CHECKED>
+			A
+			<INPUT TYPE=RADIO NAME=ans19 VALUE="B">
+			B
+			<INPUT TYPE=RADIO NAME=ans19 VALUE="C">
+			C
+			<INPUT TYPE=RADIO NAME=ans19 VALUE="D">
+			D
+			<div>
+				20 . . .
+				<INPUT TYPE=RADIO NAME=ans20 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans20 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans20 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans20 VALUE="D">
+				D
+			</div>
+			<div>
+				21 . . .
+				<INPUT TYPE=RADIO NAME=ans21 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans21 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans21 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans21 VALUE="D">
+				D
+			</div>
+			<div>
+				22 . . .
+				<INPUT TYPE=RADIO NAME=ans22 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans22 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans22 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans22 VALUE="D">
+				D
+			</div>
+			<div>
+				23 . . .
+				<INPUT TYPE=RADIO NAME=ans23 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans23 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans23 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans23 VALUE="D">
+				D
+			</div>
+			<div>
+				24 . . .
+				<INPUT TYPE=RADIO NAME=ans24 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans24 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans24 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans24 VALUE="D">
+				D
+			</div>
+			<div>
+				25 . . .
+				<INPUT TYPE=RADIO NAME=ans25 VALUE="A" CHECKED>
+				A
+				<INPUT TYPE=RADIO NAME=ans25 VALUE="B">
+				B
+				<INPUT TYPE=RADIO NAME=ans25 VALUE="C">
+				C
+				<INPUT TYPE=RADIO NAME=ans25 VALUE="D">
+				D
+			</div>
+</td>
+
+<td valign="top">
+
+<h5>BLS FOR HEALTHCARE PROVIDERS - SKILLS TESTING SHEET</h5>
+<span><h5>1_ and 2_Rescuer Adult BLS with AED Skills Testing</h5></span>
+<div align="left">
+<INPUT TYPE=checkbox name=ch1> ASSESSES: Checks for response and for .... </br>
+<INPUT TYPE=checkbox name=ch2> ACTIVATES emergency response system </br>
+<INPUT TYPE=checkbox name=ch3> Checks for PULSE (no more than 10 seconds) </br>
+<INPUT TYPE=checkbox name=ch4> Correct compression HAND PLACEMENT </br>
+<INPUT TYPE=checkbox name=ch5> ADEQUATE RATE: At least 100/min .... </br>
+<INPUT TYPE=checkbox name=ch6> ADEQUATE DEPTH: Delivers compressions  ... </br>
+<INPUT TYPE=checkbox name=ch7> ALLOWS COMPLETE CHEST RECOIL ... </br>
+<INPUT TYPE=checkbox name=ch8> MINIMIZES INTERRUPTIONS:  </br>
+<INPUT TYPE=checkbox name=ch9> DURING FIFTH SET OF COMPRESSIONS: </br>
+<INPUT TYPE=checkbox name=ch10> First rescuer continues compressions ...</br>
+<INPUT TYPE=checkbox name=ch11> Second rescuer clears victim, allowing  .... </br>
+<INPUT TYPE=checkbox name=ch12> If AED indicates a shockable rhythm,  ....</br>
+<INPUT TYPE=checkbox name=ch13> SECOND RESCUER gives 30 compressions ... </br>
+<INPUT TYPE=checkbox name=ch14> FIRST RESCUER successfully delivers .... </br>
+</div>
+
+<span><h6>1_ and 2_Rescuer Infant BLS Skills Testing </h6></span>
+<div align="left">
+<INPUT TYPE=checkbox name=ch15> ASSESSES: Checks for response and for .... </br>
+<INPUT TYPE=checkbox name=ch16> Sends someone to ACTIVATE emergency ... </br>
+<INPUT TYPE=checkbox name=ch17> Checks for PULSE (no more than 10 ...) </br>
+<INPUT TYPE=checkbox name=ch18> Correct compression HAND PLACEMENT </br>
+<INPUT TYPE=checkbox name=ch19> ADEQUATE RATE: At least 100/min .... </br>
+<INPUT TYPE=checkbox name=ch20> ADEQUATE DEPTH: Delivers .... </br>
+<INPUT TYPE=checkbox name=ch21> ALLOWS COMPLETE CHEST RECOIL ... </br>
+<INPUT TYPE=checkbox name=ch22> MINIMIZES INTERRUPTIONS: Gives ....</br>
+<INPUT TYPE=checkbox name=ch23> DURING FIFTH SET OF COMPRESSIONS: </br>
+<INPUT TYPE=checkbox name=ch24> FIRST RESCUER successfully delivers ....   </br>
+<INPUT TYPE=checkbox name=ch24> FIRST RESCUER gives 15 compressions in ....   </br>
+
+</div>
+
+
+</td>
+<td valign="top">
+<h5>HEARTSAVER CPR AED - SKILLS TESTING SHEET</h5>
+<span><h5> Table 1</h5></span>
+<div align="left">
+ Adult CPR  Child CPR </br>
+<INPUT TYPE=checkbox name=t21><INPUT TYPE=checkbox name=t21> Verbalizes that the scene is safe </br>
+<INPUT TYPE=checkbox name=t22><INPUT TYPE=checkbox name=t21> Checks for response - tap and shout </br>
+<INPUT TYPE=checkbox name=t23><INPUT TYPE=checkbox name=t21> Yells for help </br>
+<INPUT TYPE=checkbox name=t24><INPUT TYPE=checkbox name=t21> Tells someone to phone the emergency ... </br>
+<INPUT TYPE=checkbox name=t25><INPUT TYPE=checkbox name=t21> Checks for no breathing or only gasping ... </br>
+<INPUT TYPE=checkbox name=t26><INPUT TYPE=checkbox name=t21> Locates hand placement for .... </br>
+<INPUT TYPE=checkbox name=t27><INPUT TYPE=checkbox name=t21> Delivers first set of compressions ... </br>
+<INPUT TYPE=checkbox name=t28><INPUT TYPE=checkbox name=t21> ADULT: Gives 2 breaths with a mask ... </br>
+<INPUT TYPE=checkbox name=t29><INPUT TYPE=checkbox name=t21> Delivers second set of compressions ...  </br>
+<INPUT TYPE=checkbox name=t210><INPUT TYPE=checkbox name=t21> ADULT: Gives 2 breaths with a mask  ... </br>
+<INPUT TYPE=checkbox name=t211><INPUT TYPE=checkbox name=t21> Instructor says, "You have just ...</br>
+<INPUT TYPE=checkbox name=t212><INPUT TYPE=checkbox name=t21> Turns on the AED immediately after  </br>
+<INPUT TYPE=checkbox name=t213><INPUT TYPE=checkbox name=t21> Delivers third set of compressions ....</br>
+</div>
+
+<span><h5> Table 2</h5></span>
+<div align="left">
+<INPUT TYPE=checkbox name=t21> Verbalizes that the scene is safe </br>
+<INPUT TYPE=checkbox name=t22> Checks for response - tap and shout </br>
+<INPUT TYPE=checkbox name=t23> Yells for help </br>
+<INPUT TYPE=checkbox name=t25> Checks for no breathing or only gasping .. </br>
+<INPUT TYPE=checkbox name=t26> Locates hand placement for compressions .... </br>
+<INPUT TYPE=checkbox name=t27> Delivers first set of compressions ... </br>
+<INPUT TYPE=checkbox name=t28> Gives 2 breaths with a mask ... </br>
+<INPUT TYPE=checkbox name=t29> Delivers second set of compressions ...  </br>
+<INPUT TYPE=checkbox name=t210> Gives 2 breaths with a mask ... </br>
+<INPUT TYPE=checkbox name=t29> Delivers second set of compressions ...  </br>
+<INPUT TYPE=checkbox name=t211> Instructor says, "You have just completed  ...</br>
+<INPUT TYPE=checkbox name=t213> Delivers third set of compressions of ....</br>
+</div>
+
+<span><h5> Table 3</h5></span>
+<div align="left">
+<div>
+				Circle PASS or NR for each age group tested 	</br>
+				<INPUT TYPE=RADIO NAME=pas1 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=pas1 VALUE="B">
+				NR - Adult CPR AED
+				</br>			
+				
+				<INPUT TYPE=RADIO NAME=pas2 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=pas2 VALUE="B">
+				NR -  Adult CPR AED
+				</br>
+			
+				<INPUT TYPE=RADIO NAME=pas3 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=pas3 VALUE="B">
+				NR - Infant CPR
+				
+			</div>
+</td>
+<td valign="top">
+<h5>HEARTSAVER FIRST AID - SKILLS TESTING SHEET</h5>
+<span><h5> Table 1</h5></span>
+<div align="left">
+
+<INPUT TYPE=checkbox name=t21> Removes gloves by gripping one glove ... </br>
+<INPUT TYPE=checkbox name=t22> Cups the inside-out glove with the gloved  </br>
+<INPUT TYPE=checkbox name=t23> Uses 2  fingers of the bare hand near the ... </br>
+<INPUT TYPE=checkbox name=t24> Verbalizes the need to dispose of gloves ... </br>
+<INPUT TYPE=checkbox name=t25> Verbalizes that the scene is safe </br>
+<INPUT TYPE=checkbox name=t26> Verbalizes putting on gloves </br>
+<INPUT TYPE=checkbox name=t27> Checks for response - tap and shout ... </br>
+<INPUT TYPE=checkbox name=t28> Tells someone to phone the emergency ... </br>
+<INPUT TYPE=checkbox name=t29> Checks for no breathing or only gasping  ...  </br>
+<INPUT TYPE=checkbox name=t210> bLooks for obvious signs of injury ... </br>
+<INPUT TYPE=checkbox name=t211> Verbalizes checking for medical ...</br>
+</div>
+
+<span><h5> Table 2</h5></span>
+<div align="left">
+<INPUT TYPE=checkbox name=t21> Verbalizes that the scene is safe </br>
+<INPUT TYPE=checkbox name=t22> Checks for response - tap and shout </br>
+<INPUT TYPE=checkbox name=t23> Yells for help </br>
+<INPUT TYPE=checkbox name=t25> Checks for no breathing or only gasping ... </br>
+<INPUT TYPE=checkbox name=t26> Locates hand placement for compressions .... </br>
+<INPUT TYPE=checkbox name=t27> Delivers first set of compressions ... </br>
+<INPUT TYPE=checkbox name=t28> Gives 2 breaths with a mask ... </br>
+<INPUT TYPE=checkbox name=t29> Delivers second set of compressions ...  </br>
+<INPUT TYPE=checkbox name=t210> Gives 2 breaths with a mask ... </br>
+<INPUT TYPE=checkbox name=t29> Delivers second set of compressions ...  </br>
+<INPUT TYPE=checkbox name=t211> Instructor says, "You have just completed  ...</br>
+<INPUT TYPE=checkbox name=t213> Delivers third set of compressions of  ....</br>
+</div>
+
+<span><h5> Table 3</h5></span>
+<div align="left">
+<div>
+				Circle PASS or NR for each age group tested 	</br>
+				<INPUT TYPE=RADIO NAME=pas4 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=apas4 VALUE="B">
+				NR - Adult CPR AED
+				</br>			
+				
+				<INPUT TYPE=RADIO NAME=pas5 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=pas5 VALUE="B">
+				NR -  Adult CPR AED
+				</br>
+			
+				<INPUT TYPE=RADIO NAME=pas6 VALUE="A" CHECKED>
+				PASS
+				<INPUT TYPE=RADIO NAME=pas6 VALUE="B">
+				NR - Infant CPR
+				
+			</div>
+</td>
+</tr>
+</table>
+
+<a href="../customers/download_pdf">
+<div id="mainbody"  align="center">
+<div id="upload" ><span>Download PDF<span></div><span id="status" ></span>
+</div>
+</a>
+</body>

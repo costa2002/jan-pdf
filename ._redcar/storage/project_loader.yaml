@@ -1,0 +1,6 @@
+--- 
+open_files: 
+  - app/reports/customers_report.rb
+  - app/controllers/customers_controller.rb
+  - app/views/customers/index.html.erb
+  - Gemfile
